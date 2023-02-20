@@ -27,14 +27,14 @@ public class Customer {
         return result;
     }
 
-    private double getTotalCharge() {
+    public double getTotalCharge() {
         double total = 0;
         for (Rental rental : rentals)
             total += rental.getCharge();
         return total;
     }
 
-    private int getTotalFrequentRenterPoints() {
+    public int getTotalFrequentRenterPoints() {
         int total = 0;
         for (Rental rental : rentals)
             total += rental.getFrequentRenterPoints();
