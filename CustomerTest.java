@@ -21,5 +21,16 @@ public class CustomerTest {
         double delta = 0; 
         assertEquals(expectedTotalCharge, actualTotalCharge, delta);
     }
+    // Test to see if the FrequentRenterPoints is correct
+    @Test 
+    public void shouldSumFrequentRenterPoints(){
+        customer.addRental(new Rental(Encanto, 2));
+        customer.addRental(new Rental(Morbius, 1));
+        customer.addRental(new Rental(Aftersun, 3));
+        double expectedFRP = 4; 
+        double actualFRP = customer.getTotalFrequentRenterPoints();
+        double delta = 0; 
+        assertEquals(expectedFRP, actualFRP, delta);
+    }
 
 }
