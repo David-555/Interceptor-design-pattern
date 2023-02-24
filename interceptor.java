@@ -1,3 +1,3 @@
-public interface IFRPlogger {
-    void IFRP(FRPContext context); 
+public interface interceptor {
+    void intercept(FRPContext context); 
 }
