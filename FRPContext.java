@@ -1,16 +1,9 @@
 public class FRPContext {
-    private Movie movie; 
-    private Customer customer;
-    private int points; 
+    public Customer customer;
+    private String output; 
 
-    FRPContext(Movie movie, Customer customer){
+    public FRPContext(Customer customer){
         this.customer = customer; 
-        this.movie = movie; 
-        this.points = customer.getTotalFrequentRenterPoints(); 
-    }
-
-    public Movie getMovie() {
-        return movie;
     }
 
     public Customer getCustomer() {
@@ -18,7 +11,15 @@ public class FRPContext {
     }
 
     public int getPoints() {
-        return points;
+        return customer.getTotalFrequentRenterPoints();
+    }
+
+    public String getOutput() {
+        return output; 
+    }
+
+    public void setOutput(String intput){
+        output = intput; 
     }
 
 }
