@@ -20,6 +20,18 @@ public class CustomerDriver{
 
         // prints out the receipt for the rentals 
         System.out.print(customer.statement());
+        // creates the context
+        FRPContext firstcustomer = new FRPContext(customer); 
+        // creates the logger(interceptor)
+        FRPlogger loggingSystem = new FRPlogger(); 
+        // creates the dispatcher
+        Dispatcher dispatcher = new Dispatcher();
+        // dispatcher registers the logger(interceptor)
+        dispatcher.register(loggingSystem);
+        // dispatcher dispatches the context
+        dispatcher.dispatch(firstcustomer);
+        // prints out the output from the context
+        System.out.println(firstcustomer.getOutput());
 
-    }
+    }   
 }
